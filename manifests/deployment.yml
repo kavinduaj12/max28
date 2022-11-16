@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "hitech4-d489"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hitech4-d489"
+  template:
+    metadata:
+      labels:
+        app: "hitech4-d489"
+    spec:
+      containers:
+        - name: "hitech4-d489"
+          image: "kmacx.azurecr.io/hitech4"
+          ports:
+          - containerPort: 80
